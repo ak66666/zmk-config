@@ -1,0 +1,9 @@
+file_format: "1"
+id: thubsup
+name: Thumbs Up!
+type: shield
+url: https://github.com/ak66666/ThumbsUpUnsplitV2ProMicro
+requires:
+  - pro_micro
+features:
+  - keys
