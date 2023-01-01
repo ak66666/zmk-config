@@ -41,7 +41,7 @@
 
             bindings = <
     &kp &trans &kp PAUSE_BREAK &kp &trans &kp &trans &kp &trans  &kp PG_UP         &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp GRAVE  &kp DEL
-    &kp &trans &kp &trans      &kp &trans &kp &trans &kp &trans  &kp PG_DN         &kp PG_DW  &kp LEFT   &kp DOWN   &kp RIGHT  &kp &trans &kp &trans
+    &kp &trans &kp &trans      &kp &trans &kp &trans &kp &trans  &kp PG_DN         &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp &trans &kp &trans
     &kp &trans &kp K_UNDO      &kp K_CUT  &kp K_COPY &kp K_PASTE &kp DEL           &kp INSERT &kp &trans &kp &trans &kp &trans &kp &trans &kp 
                                &kp &trans &kp &trans &kp &trans  &kp &trans        &kp &trans &kp &trans &kp &trans &kp &trans
            >;
