@@ -42,7 +42,7 @@
             bindings = <
     &kp ESC             &kp PAUSE_BREAK &kp &none &kp &none  &kp &none   &kp PG_UP                    &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp GRAVE  &kp DEL
     &lt EXTRA_RIGHT TAB &kp &none       &kp &none &kp &none  &kp &none   &kp PG_DN                    &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp &none  &kp ENT
-    &kp LCTRL           &kp K_UNDO      &kp K_CUT &kp K_COPY &kp K_PASTE &kp DEL                      &kp INS    &kp &none  &kp &none  &kp &none  &kp &none  &kp RCTRL
+    &kp LCTRL           &kp K_UNDO      &kp K_CUT &kp K_COPY &kp K_PASTE &kp DELETE                   &kp INSERT &kp &none  &kp &none  &kp &none  &kp &none  &kp RCTRL
                                         &kp LGUI  &kp LALT   &kp LSHIFT  &lt CURSOR_LEFT SPACE        &kp &none  &kp RSHIFT &kp RALT   &kp LGUI
            >;
         };
@@ -62,7 +62,7 @@
             bindings = <
     &kp ESC             &kp PAUSE_BREAK &kp HOME   &kp UP     &kp END    &kp PG_UP         &kp PG_UP        &kp &none &kp &none &kp &none  &kp GRAVE  &kp DEL
     &lt EXTRA_RIGHT TAB &kp &none       &kp LEFT   &kp DOWN   &kp RIGHT  &kp PG_DN         &kp PG_DN        &kp &none &kp &none &kp &none  &kp &none &kp ENT
-    &kp LCTRL           &kp K_UNDO      &kp &none  &kp &none  &kp &none  &kp DEL           &kp INS          &kp K_CUT &kp K_COPY &kp K_PASTE &kp &none &kp RCTRL
+    &kp LCTRL           &kp K_UNDO      &kp &none  &kp &none  &kp &none  &kp DELETE        &kp INSERT       &kp K_CUT &kp K_COPY &kp K_PASTE &kp &none &kp RCTRL
                                         &kp LGUI   &kp LALT   &kp LSHIFT &kp &none         &lt CURSOR_RIGHT SPACE &kp RSHIFT       &kp RALT  &kp LGUI
             >;
         };
