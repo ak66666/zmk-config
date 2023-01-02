@@ -25,7 +25,7 @@
                                     &kp LGUI &kp LALT  &kp LSHIFT &lt CURSOR_LEFT SPACE       &lt CURSOR_RIGHT SPACE &kp RSHIFT       &kp RALT  &kp LGUI
             >;
         };
-
+/*
         cursor_right_layer {
 
 // Cursor Control on the right (Right Space)
@@ -41,12 +41,12 @@
 
             bindings = <
     &kp ESC             &kp PAUSE_BREAK &kp &none &kp &none  &kp &none   &kp PG_UP                    &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp GRAVE  &kp DEL
-    &kp TAB &kp &none       &kp &none &kp &none  &kp &none   &kp PG_DN                    &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp &none  &kp ENT
+    &kp TAB		&kp &none       &kp &none &kp &none  &kp &none   &kp PG_DN                    &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp &none  &kp ENT
     &kp LCTRL           &kp K_UNDO      &kp K_CUT &kp K_COPY &kp K_PASTE &kp DEL                      &kp INSERT &kp &none  &kp &none  &kp &none  &kp &none  &kp RCTRL
                                         &kp LGUI  &kp LALT   &kp LSHIFT  &lt CURSOR_LEFT SPACE        &kp &none  &kp RSHIFT &kp RALT   &kp LGUI
            >;
         };
-
+*/
         cursor_left_layer {
 // Cursor Control on the left (Left Space)
 // ,------------------------------------------------------------------------------------.
