@@ -19,10 +19,10 @@
 //            |WIN|ALT|RSE|SFT|    |SFT|LOW|ALT|MNU|
 
             bindings = <
-    &kp ESC    &kp Q    &kp W    &kp E     &kp R      &kp T                  &kp Y            &kp U            &kp I     &kp O     &kp P    &kp BSPC
-    &kp TAB    &kp A    &kp S    &kp D     &kp F      &kp G                  &kp H            &kp J            &kp K     &kp L     &kp SEMI &kp RET
-    &kp LCTRL  &kp Z    &kp X    &kp C     &kp V      &kp B                  &kp N            &kp M            &kp COMMA &kp DOT   &kp FSLH &kp RCTRL
-                        &kp LGUI &kp LALT  &kp LSHIFT &mo CURSOR_LEFT        &mo CURSOR_RIGHT &kp RSHIFT       &kp RALT  &kp LGUI
+    &kp ESC                &kp Q    &kp W    &kp E     &kp R      &kp T                       &kp Y            &kp U            &kp I     &kp O     &kp P    &kp BSPC
+    &lt EXTRA_RIGHT TAB    &kp A    &kp S    &kp D     &kp F      &kp G                       &kp H            &kp J            &kp K     &kp L     &kp SEMI &kp RET
+    &kp LCTRL              &kp Z    &kp X    &kp C     &kp V      &kp B                       &kp N            &kp M            &kp COMMA &kp DOT   &kp FSLH &kp RCTRL
+                                    &kp LGUI &kp LALT  &kp LSHIFT &lt CURSOR_LEFT SPACE       &lt CURSOR_RIGHT SPACE &kp RSHIFT       &kp RALT  &kp LGUI
             >;
         };
 
@@ -40,10 +40,10 @@
 //               +------+------+------+------++------+------+------+------+
 
             bindings = <
-    &kp &trans &kp PAUSE_BREAK &kp &trans &kp &trans &kp &trans  &kp PG_UP         &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp GRAVE  &kp DEL
-    &kp &trans &kp &none       &kp &trans &kp &trans &kp &trans  &kp PG_DN         &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp &trans &kp &trans
-    &kp &trans &kp K_UNDO      &kp K_CUT  &kp K_COPY &kp K_PASTE &kp DEL           &kp INSERT &kp &trans &kp &trans &kp &trans &kp &trans &kp &trans
-                               &kp &trans &kp &trans &kp &trans  &mo CURSOR_LEFT   &kp &trans &kp &trans &kp &trans &kp &trans
+    &kp ESC             &kp PAUSE_BREAK &kp &none &kp &none  &kp &none   &kp PG_UP                    &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp GRAVE  &kp DEL
+    &lt EXTRA_RIGHT TAB &kp &none       &kp &none &kp &none  &kp &none   &kp PG_DN                    &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp &none  &kp RET
+    &kp LCTRL           &kp K_UNDO      &kp K_CUT &kp K_COPY &kp K_PASTE &kp DELETE                   &kp INSERT &kp &none  &kp &none  &kp &none  &kp &none  &kp RCTRL
+                                        &kp LGUI  &kp LALT   &kp LSHIFT  &lt CURSOR_LEFT SPACE        &kp &none  &kp RSHIFT &kp RALT   &kp LGUI
            >;
         };
 
@@ -60,10 +60,10 @@
 //               +------+------+------+------++------+------+------+------+
 
             bindings = <
-    &kp &trans &kp PAUSE_BREAK &kp HOME   &kp UP     &kp END    &kp PG_UP         &kp PG_UP        &kp &trans &kp &trans &kp &trans  &kp GRAVE  &kp DEL
-    &kp &trans &kp &none       &kp LEFT   &kp DOWN   &kp RIGHT  &kp PG_DN         &kp PG_DN        &kp &trans &kp &trans &kp &trans  &kp &trans &kp &trans
-    &kp &trans &kp K_UNDO      &kp &trans &kp &trans &kp &trans &kp DEL           &kp INSERT       &kp K_CUT  &kp K_COPY &kp K_PASTE &kp &trans &kp &trans
-                               &kp &trans &kp &trans &kp &trans &kp &trans        &mo CURSOR_RIGHT &kp &trans &kp &trans &kp &trans
+    &kp ESC             &kp PAUSE_BREAK &kp HOME   &kp UP     &kp END    &kp PG_UP         &kp PG_UP        &kp &none &kp &none &kp &none  &kp GRAVE  &kp DEL
+    &lt EXTRA_RIGHT TAB &kp &none       &kp LEFT   &kp DOWN   &kp RIGHT  &kp PG_DN         &kp PG_DN        &kp &none &kp &none &kp &none  &kp &none &kp RET
+    &kp LCTRL           &kp K_UNDO      &kp &none  &kp &none  &kp &none  &kp DELETE        &kp INSERT       &kp K_CUT &kp K_COPY &kp K_PASTE &kp &none &kp RCTRL
+                                        &kp LGUI   &kp LALT   &kp LSHIFT &kp &none         &lt CURSOR_RIGHT SPACE &kp RSHIFT       &kp RALT  &kp LGUI
             >;
         };
 
@@ -81,10 +81,10 @@
 //               +------+------+------+------++------+------+------+------+
 
             bindings = <
-    &kp &trans &kp KP_N1 &kp KP_N2  &kp KP_N3  &kp KP_N4  &kp KP_N5            &kp KP_N6  &kp KP_N7  &kp KP_N8  &kp KP_N9 &kp KP_N0 &kp BSPC
-    &kp &trans &kp F1	 &kp F2     &kp F3     &kp F4     &kp F5               &kp F6     &kp F7     &kp F8     &kp F9    &kp F10   &kp &trans
-    &kp &trans &kp F11   &kp F12    &kp &none  &kp &none  &kp &none            &kp &none  &kp &none  &kp COMMA  &kp DOT   &kp FSLH  &kp &trans
-                         &kp &trans &kp &trans &kp &trans &kp &trans           &kp &trans &kp &trans &kp &trans &kp &trans
+    &kp ESC             &kp N1   &kp N2     &kp N3     &kp N4     &kp N5               &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &kp BSPC
+    &lt EXTRA_RIGHT TAB &kp F1	 &kp F2     &kp F3     &kp F4     &kp F5               &kp F6     &kp F7     &kp F8     &kp F9    &kp F10   &kp RET
+    &kp LCTRL            &kp F11  &kp F12    &kp &none  &kp &none  &kp &none            &kp &none  &kp &none  &kp COMMA  &kp DOT   &kp FSLH  &kp RCTRL
+                                 &kp LGUI   &kp LALT   &kp LSHIFT &kp &none  	       &kp &none  &kp RSHIFT &kp RALT   &kp LGUI
             >;
         };
 
@@ -104,19 +104,14 @@
 //               +------+------+------+------+------+------+------+------+
 
             bindings = <
-    &kp ESC    &kp Q    &kp W    &kp E     &kp R     &kp T                  &kp Y     &kp U     &kp I     &kp O     &kp P    &kp BSPC
-    &kp TAB    &kp A    &kp S    &kp D     &kp F     &kp G                  &kp H     &kp J     &kp K     &kp L     &kp SEMI &kp RET
-    &kp LCTRL  &kp Z    &kp X    &kp C     &kp V     &kp B                  &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH &kp RCTRL
-                        &kp LGUI &kp LALT  &kp DEL   &kp LSHIFT         &kp RSHIFT    &kp SPACE &kp RALT  &kp LGUI
+    &kp ESC    &kp &none &kp &none &kp &none &kp &none &kp &none            &kp GRAVE &kp EQUAL &kp LPAR  &kp RPAR  &kp MINUS &kp BSPC
+    &kp &trans &kp &none &kp &none &kp &none &kp &none &kp &none            &kp &none &kp &none &kp &none &kp &none &kp SQT   &kp RET
+    &kp LCTRL  &kp &none &kp &none &kp &none &kp &none &kp &none            &kp &none &kp &none &kp LBKT  &kp RBKT  &kp BSLH  &kp RCTRL
+                        &kp LGUI   &kp LALT   &kp LSHIFT &kp &none  	       &kp &none  &kp RSHIFT &kp RALT   &kp LGUI
             >;
         };
     };
-};
 
-
-
-
-/ {
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -124,4 +119,9 @@
             then-layer = <NUMBERS_FKEYS>;
         };
     };
+
 };
+
+
+
+
