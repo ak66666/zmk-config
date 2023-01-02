@@ -84,7 +84,8 @@
 
             bindings = <
     &kp ESC             &kp N1   &kp N2     &kp N3     &kp N4     &kp N5               &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &kp BSPC
-    &lt EXTRA_RIGHT TAB &kp F1	 &kp F2     &kp F3     &kp F4     &kp F5               &kp F6     &kp F7     &kp F8     &kp F9    &kp F10   &kp ENT
+    &kp ESC             &kp N1   &kp N2     &kp N3     &kp N4     &kp N5               &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &kp BSPC
+//    &lt EXTRA_RIGHT TAB &kp F1	 &kp F2     &kp F3     &kp F4     &kp F5               &kp F6     &kp F7     &kp F8     &kp F9    &kp F10   &kp ENT
     &kp LCTR            &kp F11  &kp F12    &kp &none  &kp &none  &kp &none            &kp &none  &kp &none  &kp COMMA  &kp DOT   &kp FSLH  &kp RCTRL
                                  &kp LGUI   &kp LALT   &kp LSHIFT &kp &none  	       &kp &none  &kp RSHIFT &kp RALT   &kp LGUI
             >;
