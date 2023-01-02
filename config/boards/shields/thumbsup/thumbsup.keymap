@@ -91,12 +91,12 @@
         extra_right_layer {
 // ExtraRightSide (the keys from the right side which did not fit into the matrix)
 // ,-----------------------------------------------------------------------------------.
-// | Esc  |   `  |PLOVR2|PLOVER|TxBOLT|TxBlt2|   `  |   =  |   (  |   )  |   -  |      |
+// | Esc  |   `  |Prof.0|Prof.1|Prof.2|Prof.3|   `  |   =  |   (  |   )  |   -  |      |
 // |------+------+------+------+------+-------------+------+------+------+------+------|
 // |******|      |      |      |      |      |      |      |      |      |  '   |      |
-// This is the
-// key turning
-// this layer on
+// This is the           Clear
+// key turning           Current
+// this layer on         Profile
 // |------+------+------+------+------+------|------+------+------+------+------+------|
 // |      |      |      |      |      |      |      |      |   [  |   ]  |  \   |      |
 // `------+------+------+------+------+------+------+------+------+------+------+------.
@@ -104,10 +104,10 @@
 //               +------+------+------+------+------+------+------+------+
 
             bindings = <
-    &kp ESC    &none &none    &none    &none      &none            &kp GRAVE &kp EQUAL  &kp LPAR &kp RPAR &kp MINUS &kp BSPC
-    &kp &trans &none &none    &none    &none      &none            &none     &none      &none    &none    &kp SQT   &kp RET
-    &kp LCTRL  &none &none    &none    &none      &none            &none     &none      &kp LBKT &kp RBKT &kp BSLH  &kp RCTRL
-                     &kp LGUI &kp LALT &kp LSHIFT &none  	   &none     &kp RSHIFT &kp RALT &kp LGUI
+    &kp ESC   &kp GRAVE &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3            &kp GRAVE &kp EQUAL  &kp LPAR &kp RPAR &kp MINUS &kp BSPC
+    &none     &none     &none        &bt BT_CLR   &none        &none                   &none     &none      &none    &none    &kp SQT   &kp RET
+    &kp LCTRL &none     &none        &none        &none        &none                   &none     &none      &kp LBKT &kp RBKT &kp BSLH  &kp RCTRL
+                        &kp LGUI     &kp LALT     &kp LSHIFT   &none  	               &none     &kp RSHIFT &kp RALT &kp LGUI
             >;
         };
     };
