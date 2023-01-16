@@ -41,10 +41,10 @@
 //               +------+------+------+------++------+------+------+------+
 
             bindings = <
-    &kp ESC             &kp PAUSE_BREAK &mwh SCROLL_UP &mmv MOVE_UP   &mwh SCROLL_DOWN &kp PG_UP                    &kp PG_UP             &kp HOME   &kp UP     &kp END    &kp GRAVE  &kp DEL
-    &lt EXTRA_RIGHT TAB &none           &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT  &kp PG_DN                    &kp PG_DN             &kp LEFT   &kp DOWN   &kp RIGHT  &none      &kp RET
-    &kp LCTRL           &kp K_UNDO      &kp K_CUT      &kp K_COPY     &kp K_PASTE      &kp DELETE                   &kp INSERT            &mkp LCLK  &mkp MCLK  &mkp RCLK  &none      &kp RCTRL
-                                        &kp LGUI       &kp LALT       &kp LSHIFT       &lt CURSOR_LEFT SPACE        &none                 &kp RSHIFT &kp RALT   &kp LGUI
+    &kp ESC             &kp PAUSE_BREAK &mwh SCROLL_DOWN &mmv MOVE_UP   &mwh SCROLL_UP  &kp PG_UP                    &kp PG_UP             &kp HOME   &kp UP     &kp END    &kp GRAVE  &kp DEL
+    &lt EXTRA_RIGHT TAB &none           &mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp PG_DN                    &kp PG_DN             &kp LEFT   &kp DOWN   &kp RIGHT  &none      &kp RET
+    &kp LCTRL           &kp K_UNDO      &kp K_CUT        &kp K_COPY     &kp K_PASTE     &kp DELETE                   &kp INSERT            &mkp LCLK  &mkp MCLK  &mkp RCLK  &none      &kp RCTRL
+                                        &kp LGUI         &kp LALT       &kp LSHIFT      &lt CURSOR_LEFT SPACE        &none                 &kp RSHIFT &kp RALT   &kp LGUI
            >;
         };
 
