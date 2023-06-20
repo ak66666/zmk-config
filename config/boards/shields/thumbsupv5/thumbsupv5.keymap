@@ -70,7 +70,7 @@
     &kp LCTRL           &kp K_UNDO      &mkp RCLK  &mkp MCLK  &mkp LCLK  &kp DELETE        &kp INSERT             &kp K_CUT      &kp K_COPY     &kp K_PASTE      &none     &kp RCTRL
                                         &kp LGUI   &kp LALT   &kp LSHIFT &none      &kp SPACE &kp SPACE        &lt CURSOR_RIGHT SPACE &kp RSHIFT     &kp RALT       &kp K_APP
             >;
-        };                                                                                          j
+        };
 
         numbers_layer {
 // Numbers on the home row, FNs on the top row, symbols in the second row
