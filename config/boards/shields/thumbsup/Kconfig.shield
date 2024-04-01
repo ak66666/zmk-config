@@ -1,2 +1,2 @@
 config SHIELD_THUMBSUP
-    def_bool $(shields_list_contains,thumbsup)
+    def_bool $(shields_list_contains,thumbsupv9)
