@@ -14,7 +14,7 @@
 ---
 include:
   - board: nice_nano_v2
-#    shield: reviung41
+    shield: reviung41
     shield: thumbsup
     shield: thumbsupv5
     shield: thumbsupv9

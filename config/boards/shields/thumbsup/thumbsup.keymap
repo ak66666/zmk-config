@@ -105,7 +105,7 @@
 //               +------+------+------+------+------+------+------+------+
 
             bindings = <
-    &kp ESC   &kp GRAVE &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3            &kp GRAVE &kp EQUAL  &kp LPAR &kp RPAR &kp MINUS &kp BSPC
+     &kp ESC   &kp GRAVE &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3            &kp GRAVE &kp EQUAL  &kp LPAR &kp RPAR &kp MINUS &kp BSPC
     &none     &none     &none        &bt BT_CLR   &none        &none                   &none     &none      &none    &none    &kp SQT   &kp RET
     &kp LCTRL &none     &none        &none        &none        &none                   &none     &none      &kp LBKT &kp RBKT &kp BSLH  &kp RCTRL
                         &kp LGUI     &kp LALT     &kp LSHIFT   &none  	               &none     &kp RSHIFT &kp RALT &kp K_APP
