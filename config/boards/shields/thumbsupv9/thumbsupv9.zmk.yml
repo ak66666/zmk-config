@@ -1,6 +1,6 @@
 file_format: "1"
 id: thumbsupv9
-name: ThumbsUp_v9
+name: ThumbsUpV9
 type: shield
 url: https://github.com/ak66666/ThumbsUpUnsplitV9
 requires: [pro_micro]
