@@ -1,6 +1,6 @@
 if SHIELD_THUMBSUPV5
 
 config ZMK_KEYBOARD_NAME
-    default "ThumbsUp_v5"
+    default "ThumbsUpV5"
 
 endif
