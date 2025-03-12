@@ -1,0 +1,6 @@
+if SHIELD_THUMBSUPV9
+
+config ZMK_KEYBOARD_NAME
+    default "ThumbsUpV9"
+
+endif
