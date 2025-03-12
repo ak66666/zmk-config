@@ -1,6 +1,0 @@
-if SHIELD_THUMBSUP
-
-config ZMK_KEYBOARD_NAME
-    default "ThumbsUp_v5"
-
-endif
