@@ -1,2 +1,2 @@
-config SHIELD_THUMBSUP
+config SHIELD_THUMBSUPV5
     def_bool $(shields_list_contains,thumbsup)
