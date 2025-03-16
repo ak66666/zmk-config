@@ -1,7 +1,7 @@
-if SHIELD_THUMBSUPV9CIRQUE
+if SHIELD_THUMBSUPV9CQ
 
 config ZMK_KEYBOARD_NAME
-    default "ThumbsUpV9Cirque"
+    default "ThumbsUpV9Cq"
 
 config ZMK_POINTING
     default y

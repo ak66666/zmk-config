@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "thumbsupv9cirque.dtsi"
+#include "thumbsupv9cq.dtsi"
 
 &glidepoint  {
     status = "okay";
