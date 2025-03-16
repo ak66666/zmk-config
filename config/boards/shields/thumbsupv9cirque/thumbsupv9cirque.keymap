@@ -1,7 +1,12 @@
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-//#include <dt-bindings/zmk/mouse.h>
+//#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/pointing.h>
+
 
 #define DEFAULT 0
 #define CURSOR_RIGHT 1
@@ -12,7 +17,13 @@
 // Mouse speed increased
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 17    // default: 10
-#include <dt-bindings/zmk/pointing.h>
+
+&glidepoint_listener {
+    scroller {
+        layers = <LOWER>;
+        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 5>;
+    };
+};
 
 / {
     keymap {
