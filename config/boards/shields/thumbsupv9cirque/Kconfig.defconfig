@@ -1,0 +1,16 @@
+if SHIELD_THUMBSUPV9CIRQUE
+
+config ZMK_KEYBOARD_NAME
+    default "ThumbsUpV9Cirque"
+
+# Other keyboard settings
+
+config ZMK_POINTING
+    default y
+
+# Cirque Proglide uses I2C (I think, in my QMK boards, at least.)
+
+config I2C
+    default y
+
+endif

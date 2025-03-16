@@ -1,0 +1,9 @@
+file_format: "1"
+id: thumbsupv9cirque
+name: ThumbsUpV9cirque
+type: shield
+url: https://github.com/ak66666/ThumbsUpUnsplitV9
+requires: [pro_micro]
+features:
+  - keys
+  - pointer
