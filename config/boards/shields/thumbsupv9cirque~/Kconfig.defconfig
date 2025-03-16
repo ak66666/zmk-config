@@ -1,6 +1,0 @@
-if SHIELD_THUMBSUPV9CIRQUE
-
-config ZMK_KEYBOARD_NAME
-    default "ThumbsUpV9Cirque"
-
-endif
