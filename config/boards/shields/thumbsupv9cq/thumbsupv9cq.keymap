@@ -18,12 +18,12 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 17    // default: 10
 
-&glidepoint_listener {
-    scroller {
-        layers = <DEFAULT>;
-        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 5>;
-    };
-};
+//&glidepoint_listener {
+//    scroller {
+//        layers = <DEFAULT>;
+//        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 5>;
+//    };
+//};
 
 / {
     keymap {
