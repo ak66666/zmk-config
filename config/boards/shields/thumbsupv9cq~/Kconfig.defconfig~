@@ -7,8 +7,6 @@ config ZMK_POINTING
     default y
 
 config I2C
-    default y
+	default y
 
 endif
-
- 
