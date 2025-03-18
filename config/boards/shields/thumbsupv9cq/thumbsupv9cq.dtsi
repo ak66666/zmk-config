@@ -74,10 +74,12 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                  RC(2,6) RC(2,7)
 
 &pro_micro_i2c {
     status = "okay";
+    sda-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH)>;
+    scl-gpios = <&pro_micro 3 (GPIO_ACTIVE_HIGH)>;
 
-    glidepoint: glidepoint@1 {
+    glidepoint: glidepoint@0 {
         compatible = "cirque,pinnacle";
-        reg = <0x1>;
+        reg = <0x2a>;
         status = "okay";
         dr-gpios = <&pro_micro 21 (GPIO_ACTIVE_LOW)>;
         sensitivity = "4x";
