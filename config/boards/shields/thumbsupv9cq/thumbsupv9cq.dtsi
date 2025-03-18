@@ -5,8 +5,8 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-
-//#include <layouts/kata0510/lily58.dtsi>
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 
 / {
 
@@ -68,22 +68,36 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                  RC(2,6) RC(2,7)
     };
 };
 
-//&ak66666_thumbsupv9_layout {
-//    transform = <&default_transform>;
-//};
+&pinctrl {
+ 
+  i2c0_default: i2c0_default {
+    group1 {
+      psels = <NRF_PSEL(TWIM_SDA, 1, 0)>,
+          <NRF_PSEL(TWIM_SCL, 0, 24)>;
+    };
+  };
 
-//&pro_micro_i2c {
-&i2c1 {
+  i2c0_sleep: i2c0_sleep {
+    group1 {
+      psels = <NRF_PSEL(TWIM_SDA, 1, 0)>,
+          <NRF_PSEL(TWIM_SCL, 0, 24)>;
+      low-power-enable;
+    };
+  };
+};
+
+&i2c0 {
     status = "okay";
-
-    glidepoint: glidepoint@0 {
+    glidepoint: glidepoint@2a {
         compatible = "cirque,pinnacle";
         reg = <0x2a>;
         status = "okay";
-        dr-gpios = <&pro_micro 21 (GPIO_ACTIVE_LOW)>;
-        sensitivity = "4x";
-        //sleep;
-        //no-taps;
-        y-invert;
+        dr-gpios = <&gpio1 21 (GPIO_ACTIVE_HIGH)>;
+        absolute-mode;
+        absolute-mode-scale-to-width=<1024>;
+        absolute-mode-scale-to-height=<1024>;
+        sensitivity = "2x";
+        // sleep;
+        // no-taps;
     };
-};
+ };
