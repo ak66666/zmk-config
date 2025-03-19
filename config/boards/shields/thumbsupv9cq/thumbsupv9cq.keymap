@@ -36,7 +36,7 @@
             bindings = <
     &kp ESC                &kp Q    &kp W    &kp E     &kp R      &kp T                                         &kp Y            &kp U            &kp I     &kp O     &kp P    &kp BSPC
     &lt EXTRA_RIGHT TAB    &kp A    &kp S    &kp D     &kp F      &kp G                                         &kp H            &kp J            &kp K     &kp L     &kp SEMI &kp RET
-    &kp LCTRL              &kp Z    &kp X    &kp C     &kp V      &kp B                                         &kp N            &kp M            &kp COMMA &kp DOT   &kp FSLH &kp RCTRL
+//    &kp LCTRL              &kp Z    &kp X    &kp C     &kp V      &kp B                                         &kp N            &kp M            &kp COMMA &kp DOT   &kp FSLH &kp RCTRL
 //                                    &kp LGUI &kp LALT  &kp LSHIFT &lt CURSOR_LEFT SPACE &kp SPACE &kp SPACE  &lt CURSOR_RIGHT SPACE &kp RSHIFT    &kp RALT  &kp K_APP
             >;
         };
@@ -57,7 +57,7 @@
             bindings = <
     &kp ESC                &kp Q    &kp W    &kp E     &kp R      &kp T                                         &kp Y            &kp U            &kp I     &kp O     &kp P    &kp BSPC
     &lt EXTRA_RIGHT TAB    &kp A    &kp S    &kp D     &kp F      &kp G                                         &kp H            &kp J            &kp K     &kp L     &kp SEMI &kp RET
-    &kp LCTRL              &kp Z    &kp X    &kp C     &kp V      &kp B                                         &kp N            &kp M            &kp COMMA &kp DOT   &kp FSLH &kp RCTRL
+//    &kp LCTRL              &kp Z    &kp X    &kp C     &kp V      &kp B                                         &kp N            &kp M            &kp COMMA &kp DOT   &kp FSLH &kp RCTRL
 //                                    &kp LGUI &kp LALT  &kp LSHIFT &lt CURSOR_LEFT SPACE &kp SPACE &kp SPACE  &lt CURSOR_RIGHT SPACE &kp RSHIFT    &kp RALT  &kp K_APP
            >;
         };
@@ -77,7 +77,7 @@
             bindings = <
     &kp ESC                &kp Q    &kp W    &kp E     &kp R      &kp T                                         &kp Y            &kp U            &kp I     &kp O     &kp P    &kp BSPC
     &lt EXTRA_RIGHT TAB    &kp A    &kp S    &kp D     &kp F      &kp G                                         &kp H            &kp J            &kp K     &kp L     &kp SEMI &kp RET
-    &kp LCTRL              &kp Z    &kp X    &kp C     &kp V      &kp B                                         &kp N            &kp M            &kp COMMA &kp DOT   &kp FSLH &kp RCTRL
+//    &kp LCTRL              &kp Z    &kp X    &kp C     &kp V      &kp B                                         &kp N            &kp M            &kp COMMA &kp DOT   &kp FSLH &kp RCTRL
 //                                    &kp LGUI &kp LALT  &kp LSHIFT &lt CURSOR_LEFT SPACE &kp SPACE &kp SPACE  &lt CURSOR_RIGHT SPACE &kp RSHIFT    &kp RALT  &kp K_APP
             >;
         };
@@ -98,7 +98,7 @@
             bindings = <
     &kp ESC                &kp Q    &kp W    &kp E     &kp R      &kp T                                         &kp Y            &kp U            &kp I     &kp O     &kp P    &kp BSPC
     &lt EXTRA_RIGHT TAB    &kp A    &kp S    &kp D     &kp F      &kp G                                         &kp H            &kp J            &kp K     &kp L     &kp SEMI &kp RET
-    &kp LCTRL              &kp Z    &kp X    &kp C     &kp V      &kp B                                         &kp N            &kp M            &kp COMMA &kp DOT   &kp FSLH &kp RCTRL
+//    &kp LCTRL              &kp Z    &kp X    &kp C     &kp V      &kp B                                         &kp N            &kp M            &kp COMMA &kp DOT   &kp FSLH &kp RCTRL
 //                                    &kp LGUI &kp LALT  &kp LSHIFT &lt CURSOR_LEFT SPACE &kp SPACE &kp SPACE  &lt CURSOR_RIGHT SPACE &kp RSHIFT    &kp RALT  &kp K_APP
             >;
         };
@@ -121,7 +121,7 @@
             bindings = <
     &kp ESC                &kp Q    &kp W    &kp E     &kp R      &kp T                                         &kp Y            &kp U            &kp I     &kp O     &kp P    &kp BSPC
     &lt EXTRA_RIGHT TAB    &kp A    &kp S    &kp D     &kp F      &kp G                                         &kp H            &kp J            &kp K     &kp L     &kp SEMI &kp RET
-    &kp LCTRL              &kp Z    &kp X    &kp C     &kp V      &kp B                                         &kp N            &kp M            &kp COMMA &kp DOT   &kp FSLH &kp RCTRL
+//    &kp LCTRL              &kp Z    &kp X    &kp C     &kp V      &kp B                                         &kp N            &kp M            &kp COMMA &kp DOT   &kp FSLH &kp RCTRL
 //                                    &kp LGUI &kp LALT  &kp LSHIFT &lt CURSOR_LEFT SPACE &kp SPACE &kp SPACE  &lt CURSOR_RIGHT SPACE &kp RSHIFT    &kp RALT  &kp K_APP
             >;
         };
