@@ -2,39 +2,17 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: miketronic
-      url-base: https://github.com/miketronic/
-    - name: halfdane
-      url-base: https://github.com/halfdane/
-    - name: johanson
+    - name: petejohanson
       url-base: https://github.com/petejohanson
-    - name: miryoku
-      url-base: https://github.com/manna-harbour/
+    # Additional modules containing boards/shields/custom code can be listed here as well
+    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: johanson
-      revision: split/wired-split-first-pass
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
-    - name: zephyr
-      remote: johanson
-      revision: v3.5.0+zmk-fixes+rp2040-uart-fifo
-      import: west.yml
-#    - name: zmk
-#      remote: halfdane
-#      revision: rp2040zero
-#      import: app/west.yml
     - name: cirque-input-module
-      remote: halfdane
-      revision: absolute_mode
-    - name: zmk-input-processors
-      remote: halfdane
+      remote: petejohanson
       revision: main
-    - name: zmk-input-gestures
-      remote: halfdane
-      revision: main
-    - name: miryoku_zmk
-      remote: halfdane
-      revision: master
-  self: 
+  self:
     path: config
-
