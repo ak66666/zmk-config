@@ -105,7 +105,7 @@ RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5)                  RC(1,6) RC(1,7)
         reg = <0x2a>;
         status = "okay";
         dr-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH)>;
-        sensitivity = "1x";
+        sensitivity = "4x";
         //sleep;
         //no-taps;
     };
