@@ -15,3 +15,5 @@
 include:
   - board: nice_nano_v2
     shield: thumbsupv9cq
+  - board: nice_nano_v2
+    shield: thumbsupv9s
