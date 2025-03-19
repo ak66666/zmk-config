@@ -1,2 +1,0 @@
-config SHIELD_THUMBSUPV9cq
-    def_bool $(shields_list_contains,thumbsupv9cq)
