@@ -3,4 +3,11 @@ if SHIELD_THUMBSUPV9q
 config ZMK_KEYBOARD_NAME
     default "ThumbsUpV9q"
 
+config ZMK_POINTING
+    default y
+
+config I2C
+	default y
+
+
 endif

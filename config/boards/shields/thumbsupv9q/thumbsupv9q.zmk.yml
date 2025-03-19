@@ -6,3 +6,4 @@ url: https://github.com/ak66666/ThumbsUpUnsplitV9cq
 requires: [pro_micro]
 features:
   - keys
+  - pointer
