@@ -58,14 +58,6 @@ RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5)                  RC(1,6) RC(1,7)
 };
 
 
-&glidepoint  {
-    status = "okay";
-};
-
-&glidepoint_listener {
-    status = "okay";
-};
-
 &pro_micro_i2c {
     status = "okay";
 
@@ -80,3 +72,12 @@ RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5)                  RC(1,6) RC(1,7)
         y-invert;
     };
 };
+
+&glidepoint  {
+    status = "okay";
+};
+
+&glidepoint_listener {
+    status = "okay";
+};
+
