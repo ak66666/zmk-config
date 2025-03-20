@@ -13,9 +13,11 @@
 #
 ---
 include:
-  - board: nice_nano_v2
-    shield: thumbsupv9q
-    snippet: zmk-usb-logging
-
 #  - board: nice_nano_v2
-#    shield: thumbsupv9s
+#    shield: thumbsupv9q
+#    snippet: zmk-usb-logging
+
+  - board: nice_nano_v2
+    shield: hillside_view_left
+  - board: nice_nano_v2
+    shield: hillside_view_right
