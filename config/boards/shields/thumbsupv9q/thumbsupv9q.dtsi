@@ -1,6 +1,6 @@
 &i2c0 {
     status = "disabled";
-    glidepoint0: glidepoint@2a {
+    glidepoint: glidepoint@2a {
         compatible = "cirque,pinnacle";
         reg = <0x2a>;
         status = "disabled";
@@ -19,7 +19,7 @@
 	/* AK: Is it used anywhere? */
     tpad_central_listener {
         compatible = "zmk,input-listener";
-         device = <&glidepoint0>;
+         device = <&glidepoint>;
         xy-swap;
         y-invert;
         x-invert;
