@@ -17,6 +17,10 @@
         ;
 };
 
-&left_encoder {
+&glidepoint  {
+    status = "okay";
+};
+
+&glidepoint_listener {
     status = "okay";
 };
