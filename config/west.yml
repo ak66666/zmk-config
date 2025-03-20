@@ -3,10 +3,10 @@
 # containing the user config, modules, zephy and ZMK.
 #
 # ZMK-Workspace
-# ??? config
-# ??? modules
-# ??? zephyr
-# ??? zmk
+# ├── config
+# ├── modules
+# ├── zephyr
+# └── zmk
 #
 # To create a local build environment, clone this repository and then run the
 # following commands from its toplevel directory:
@@ -119,4 +119,3 @@ manifest:
 
   self:
     path: config
- 

@@ -1,0 +1,157 @@
+#define L_ENGRAM 0
+#define L_DVORAK 1
+#define L_SYMS 2
+#define L_NUMS 3
+#define L_NAV 4
+
+// Layers must be defined before base.keymap is imported, since it defines
+// certain entities based on the existence of layers that only exist on boards
+// big enough to have keys to access them.
+#include "hillside_view-labels.h"
+#include "base.keymap"
+#include "mouse.dtsi"
+
+&chosen {
+	zmk,matrix_transform = &five_column_transform;
+};
+
+/ {
+	/* assign `input-listener` to all pointing devices */
+	/* &glidepoint0 on central, &glidepoint1 on peripheral */
+    tpad_central_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&glidepoint0>;
+        y-invert;
+        scale-multiplier = <5>;
+        // xy-swap;
+        // x-invert;
+	};
+
+    tpad_peripheral_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&glidepoint1>;
+        layers = <L_DVORAK L_ENGRAM L_SYMS L_NAV>;
+        y-invert;
+        scale-multiplier = <5>;
+        /* NOTE: do NOT override event code here, */
+        /*       let Cirque glidepoint reports click from taps */
+        // evt-type = <INPUT_EV_REL>;
+        // x-input-code = <INPUT_REL_X>;
+        // y-input-code = <INPUT_REL_Y>;
+    };
+
+    tpad_peripheral_scroll {
+        compatible = "zmk,input-behavior-listener";
+        device = <&glidepoint1>;
+        layers = <L_NUMS>;
+        /* NOTE: only apply input-code overriding for INPUT_EV_REL */
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_HWHEEL>;
+        y-input-code = <INPUT_REL_WHEEL>;
+        bindings = <&ib_wheel_scaler 1 8>;
+    };
+
+    ib_wheel_scaler: ib_wheel_scaler {
+		compatible = "zmk,input-behavior-scaler";
+		#binding-cells = <2>;
+		evt-type = <INPUT_EV_REL>;
+		input-code = <INPUT_REL_WHEEL>;
+    };
+};
+
+// Carbon copy of labels.h diagram for convenience
+//
+// | LT4  | LT3  | LT2  | LT1  | LT0  |                                 | RT0  | RT1  | RT2  | RT3  | RT4  |
+// | LM4  | LM3  | LM2  | LM1  | LM0  |                                 | RM0  | RM1  | RM2  | RM3  | RM4  |
+// | LB4  | LB3  | LB2  | LB1  | LB0  |                                 | RB0  | RB1  | RB2  | RB3  | RB4  |
+//                                    | LH4  |                   | RH4  |
+//                      | LH3  | LH2  | LH1  | LH0  |     | RH0  | RH1  | RH2  | RH3  |
+
+ZMK_COMBO(c_bksp, &kp BSPC, RT3 RT2, ALL, COMBO_JOINTLY_MS)
+ZMK_COMBO(c_esc, &kp ESC, LT3 LT2, ALL, COMBO_JOINTLY_MS)
+ZMK_COMBO(c_tab, &kp TAB, LM3 LM0, ALL, COMBO_JOINTLY_MS)
+ZMK_COMBO(c_ins, &kp INS, LM3 LT2 LM0, ALL, COMBO_JOINTLY_MS)
+ZMK_COMBO(c_mins, &kp MINUS, RM2 RM3, ALL, COMBO_JOINTLY_MS)
+ZMK_COMBO(c_slsh, &kp SLASH, RB2 RB3, ALL, COMBO_JOINTLY_MS)
+ZMK_COMBO(c_pipe, &kp BACKSLASH, RM0 RM2 RM3, ALL, COMBO_JOINTLY_MS)
+ZMK_COMBO(c_plus, &kp PLUS, LB0 LB2 LB3, ALL, COMBO_JOINTLY_MS)
+ZMK_COMBO(c_eql, &kp EQUAL, RB0 RB2 RB3, ALL, COMBO_JOINTLY_MS)
+ZMK_COMBO(c_lockscreen, &kp LG(HOME), RM0 RM1 RM2, ALL, COMBO_JOINTLY_MS)
+ZMK_COMBO(c_closewin, &kp LG(END), RM0 RM2 RM4, ALL, COMBO_JOINTLY_MS)
+ZMK_COMBO(c_mfa, &kp LG(O), LT2 LT1 LT0, ALL, COMBO_JOINTLY_MS)
+ZMK_COMBO(c_pwd, &kp LG(LC(O)), RT0 RT1 RT2, ALL, COMBO_JOINTLY_MS)
+ZMK_COMBO(c_bootloader, &bootloader, LH3 LH2 LH0 RH0 RH2 RH3, ALL, COMBO_LAZILY_MS)
+
+/* Keymap */
+
+ZMK_LAYER(engram,
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                         ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+     &kp B         &kp Y         &kp O         &kp U         &mt LPAR SQT                                                            &mt RPAR Q    &kp L         &kp D         &kp W         &kp V
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &kp C         &kp I         &kp E         &hml LGUI A   &mt LBKT COMMA                                                          &mt RBKT DOT  &hmr RGUI H   &kp T         &kp S         &kp N
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &mt COLON G   &kp X         &kp J         &kp K         &mt LBRC Z                                                              &mt RBRC SLASH &kp R        &kp M         &kp F         &mt SEMI P
+// ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┼─────────────╮                             ╭─────────────┼─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
+                                                                           NAV_DEL                                     &mkp LCLK
+//                                           ╭─────────────┬─────────────┼─────────────┼─────────────╮ ╭─────────────┼─────────────┼─────────────┬─────────────╮
+                                               &kp LCTL      ESC_SYMS      NAV_BSPC      &kp LSHFT       NUMS_SPACE    ENT_NAV       &tog L_SYMS   &kp RALT
+//                                           ╰─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────╯
+)
+
+ZMK_LAYER(dvorak,
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                         ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+     &kp SQT       &kp COMMA     &kp DOT       &kp P         &mt LPAR Y                                                              &mt RPAR F    &kp G         &kp C         &kp R         &kp L
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &kp A         &kp O         &kp E         &hml LGUI U   &mt LBKT I                                                              &mt RBKT D    &hmr RGUI H   &kp T         &kp N         &kp S
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &mt COLON SEMI &kp Q        &kp J         &kp K         &mt LBRC X                                                              &mt RBRC B    &kp M         &kp W         &kp V         &mt SEMI Z
+// ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┼─────────────╮                             ╭─────────────┼─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
+                                                                           NAV_DEL                                     &mkp LCLK
+//                                           ╭─────────────┬─────────────┼─────────────┼─────────────╮ ╭─────────────┼─────────────┼─────────────┬─────────────╮
+                                               &kp LCTL      ESC_SYMS      NAV_BSPC      &kp LSHFT       NUMS_SPACE    ENT_NAV       &tog L_SYMS   &kp RALT
+//                                           ╰─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────╯
+)
+
+ZMK_LAYER(syms,
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                         ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+     &kp EXCL      &kp AT        &kp POUND     &kp DLLR      &kp LT                                                                  &kp GT        &kp PRCNT     &kp CARET     &kp AMPS      &kp STAR
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     XXX           XXX           XXX           XXX           XXX                                                                     XXX           XXX           XXX           XXX           XXX
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     XXX           XXX           XXX           XXX           &to L_ENGRAM                                                            &to L_DVORAK  XXX           XXX           XXX           XXX
+// ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┼─────────────╮                             ╭─────────────┼─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
+                                                                           &tog L_NAV                                  &mkp MCLK
+//                                           ╭─────────────┬─────────────┼─────────────┼─────────────╮ ╭─────────────┼─────────────┼─────────────┬─────────────╮
+                                               ___           ___           ___           ___             &kp SPACE     ___           ___           ___
+//                                           ╰─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────╯
+)
+
+ZMK_LAYER(nums,
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                         ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+     &kp GRAVE     &kp F7        &kp F8        &kp F9        &kp F12                                                                 EMOJI_PICKER  &kp N7        &kp N8        &kp N9        &sl L_SYMS
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+	 XXX           &kp F4        &kp F5        &kp F6        &kp F11                                                                 &kp MINUS     &kp N4        &kp N5        &kp N6        &kp DOT
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     XXX           &kp F1        &kp F2        &kp F3        &kp F10                                                                 &kp SLASH     &kp N1        &kp N2        &kp N3        &kp N0
+// ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┼─────────────╮                             ╭─────────────┼─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
+                                                                           &kp K_VOL_UP                                &mkp RCLK
+//                                           ╭─────────────┬─────────────┼─────────────┼─────────────╮ ╭─────────────┼─────────────┼─────────────┬─────────────╮
+                                               ___           &kp K_MUTE    &kp K_VOL_DN  ___             ___           &kp ENTER     ___           ___
+//                                           ╰─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────╯
+)
+
+ZMK_LAYER(nav,
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                         ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+     XXX           XXX           &kp UP        XXX           XXX                                                                     XXX           XXX           &kp PG_UP     XXX           XXX
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     XXX           &kp LEFT      &kp ENTER     &kp RIGHT     XXX                                                                     XXX           &kp HOME      &kp ENTER     &kp END       XXX
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     XXX           XXX           &kp DOWN      XXX           XXX                                                                     XXX           XXX           &kp PG_DN     XXX           XXX
+// ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┼─────────────╮                             ╭─────────────┼─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
+                                                                           &tog L_NAV                                  XXX
+//                                           ╭─────────────┬─────────────┼─────────────┼─────────────╮ ╭─────────────┼─────────────┼─────────────┬─────────────╮
+                                               XXX           XXX           XXX           XXX             XXX           XXX           XXX           XXX
+//                                           ╰─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────╯
+)
+
+/* vim: set ft=c tw=174: */
