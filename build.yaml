@@ -13,9 +13,9 @@
 #
 ---
 include:
+#  - board: nice_nano_v2
+#    shield: thumbsupv5
+#  - board: nice_nano_v2
+#    shield: thumbsupv9 
   - board: nice_nano_v2
-    shield: settings_reset
-  - board: nice_nano_v2
-    shield: hillside_view_left
-  - board: nice_nano_v2
-    shield: hillside_view_right
+    shield: thumbsupv9q
