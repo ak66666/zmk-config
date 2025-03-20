@@ -6,13 +6,28 @@ if SHIELD_HILLSIDE_VIEW_LEFT
 config ZMK_KEYBOARD_NAME
     default "Hillside View"
 
+# AK: made the right side central
+#config ZMK_SPLIT_ROLE_CENTRAL
+#    default y
+
+config ZMK_USB
+    default y
+
+endif # SHIELD_HILLSIDE_VIEW_LEFT
+
+if SHIELD_HILLSIDE_VIEW_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "Hillside View"
+
+# AK: made the right side central
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 config ZMK_USB
     default y
 
-endif # SHIELD_HILLSIDE_VIEW_LEFT
+endif # SHIELD_HILLSIDE_VIEW_RIGHT
 
 if SHIELD_HILLSIDE_VIEW_LEFT || SHIELD_HILLSIDE_VIEW_RIGHT
 
