@@ -8,7 +8,7 @@
 	// AK: Used 107 in the middle of Nice!Nano since no free ProMicro pins are left in the key matrix. 
 	dr-gpios = <&gpio1 7 GPIO_ACTIVE_HIGH>;
 
-        sensitivity = "1x";
+        sensitivity = "2x";
         sleep;
         //no-taps;
     };
