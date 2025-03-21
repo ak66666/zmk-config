@@ -8,7 +8,7 @@
 	// AK: Used 107 in the middle of Nice!Nano since no free ProMicro pins are left in the key matrix. 
 	dr-gpios = <&gpio1 7 GPIO_ACTIVE_HIGH>;
 
-        sensitivity = "2x";
+        sensitivity = "1x";
         sleep;
         //no-taps;
     };
@@ -17,11 +17,9 @@
 
 / {
 	/* assign `input-listener` to all pointing devices */
-	/* &glidepoint0 on central, &glidepoint1 on peripheral */
-	/* AK: Is it used anywhere? */
     tpad_central_listener {
         compatible = "zmk,input-listener";
-         device = <&glidepoint>;
+        device = <&glidepoint>;
         xy-swap;
         y-invert;
         x-invert;
