@@ -5,6 +5,7 @@
         reg = <0x2a>;
         status = "disabled";
 //        dr-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH)>;
+	dr-gpios = <&gpio1 7 GPIO_ACTIVE_HIGH>;
 
         sensitivity = "1x";
         sleep;
